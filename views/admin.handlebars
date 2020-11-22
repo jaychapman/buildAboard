@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="spacer4"> </div>
+    <div class="adminContainer">
+
+        <h3>Admin</h3>
+
+
+        <br>
+        <img id="adminImg" src="/img/admin.png" alt="">
+
+        <br>
+        <br>
+        <h3>View Orders</h3>
+        <br>
+        <br>
+
+            <!--display reviews-->
+    {{#each orders}}
+    <section id="reviews">
+      <div class="card"></div>
+      <div id="displayReviews" class="card">
+        <div class="card-body reviewBody">
+          <h5 id="first_nameDisplay" class="card-title">Order</h5>
+          <p class="card-text">Last Name: {{dataValues.lastName}}</p>
+          <p class="card-text">First Name: {{dataValues.firstName}}</p>
+          <p class="card-text">Email: {{dataValues.email}}</p>
+          <br>
+          <p class="card-text">Deck: {{dataValues.orderDeck}}</p>
+          <p class="card-text">Truck: {{dataValues.orderTruck}}</p>
+          <p class="card-text">Wheels: {{dataValues.orderWheels}}</p>
+          <p class="card-text">Bearings: {{dataValues.orderBearings}}</p>
+          
+        </div>
+      </div>
+
+      <br>
+      {{else}}
+      <p>No orders Available</p>
+      <br>
+      {{/each}}
+    </section>
+
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="spacer"></div>
+            <h6>This site created by Death Wobble</h6>
+
+        </div>
+
+
+    </footer>
+
+
+</div>

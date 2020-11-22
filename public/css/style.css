@@ -1,0 +1,240 @@
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #3b414f;
+    background-color: white; 
+
+  }
+
+  h1{
+    color: white;
+  }
+
+  h4{
+    color: #a12a30;
+  }
+  
+  header {
+    background-image: url("img/background3.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: fixed top;
+    background-repeat: no-repeat;
+  }
+
+  #headerName {
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  #mainText {
+    text-shadow: black 50px;
+    text-align: center;
+    color: white;
+    height: 100vh;
+  }
+
+  #reviewImgContainer{
+    text-align: right;
+  }
+  #reviewImage{
+    height: 400px;
+    width: auto;
+  }
+
+  #thankyouImg{
+    height: 400px;
+    width: auto;
+  }
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+
+  #portfolio {
+    color: white;
+  } */
+  
+  h3 {
+    color: #3b414f;
+  }
+
+  .modal {
+    color: black;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  .modal-body img {
+    width: 100%;
+    height: auto;
+  }
+
+  #skateboardDisplay{
+    text-align: center;
+  }
+
+  #skatePic{
+    text-align: center;
+  }
+
+  #skatePic img{
+    width: auto;
+    height: 400px;
+  }
+  
+  #myNav {
+    background-color: #a12a30;
+  }
+  
+  a {
+    color: #3b414f;
+  }
+  
+  #headerName {
+    color: white;
+    float: left;
+  }
+
+  #adminImg{
+    width: 250px;
+    height: auto;
+  }
+
+  .displayOrders{
+    text-align: center;
+  }
+  
+  #build, #review {
+    min-height: 100vh;
+  }
+
+  .adminContainer{
+    text-align: center;
+  }
+
+  .customerSearchNav{
+    text-align: center;
+  }
+
+  .searchForm{
+    text-align: center;
+  
+  }
+
+  .form-inline{
+    display: block;
+  }
+
+  #first_nameDisplay{
+    color: #a12a30;
+  }
+
+  .modalForm{
+    text-align: left;
+  }
+
+  .modal-footer{
+    text-align: center;
+    display: block;
+  }
+
+
+        /* apply CSS to the select tag of  
+         .dropdown-container div*/ 
+
+
+  /* .form-control{
+    width: 60%;
+  } */
+  
+  .spacer {
+    height: 80px;
+  }
+  
+  .spacer2 {
+    height: 25vh;
+  }
+  
+  .spacer3 {
+    height: 20vh;
+  }
+
+  .spacer4 {
+    height: 10vh;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .invoiceButton{
+    text-align: center;
+  }
+  
+  footer {
+      color: #a12a30;
+      width: 100%;
+      font-size: smaller;
+      text-align: center;
+    
+  }
+  
+  /* Social media icons and links  */
+  #icons {
+    font-size: x-large;
+  }
+  #startOver{
+    text-decoration: wavy;
+  }
+
+  #icons :hover {
+    color: #a12a30;
+  }
+
+/* .showOrder{
+  display: none;
+} */
+
+  /* Media Queries*/
+  @media only screen and (max-width: 986px) {
+    header {
+      background-image: url("img/background2.jpg");
+      background-size: cover;
+      background-position: fixed top;
+      background-repeat: no-repeat;
+    }
+    .spacer2 {
+      height: 50vh;
+    }
+    /* #skatePic{
+      width: 250px;
+      height: auto;
+    } */
+
+    #skatePic{
+      text-align: center;
+    }
+  
+    #skatePic img{
+      width: 250;
+      height: auto;
+    }
+    #reviewImage{
+      height: 200px;
+      width: auto;
+    }
+    #thankyouImg{
+      height: 200px;
+      width: auto;
+    }
+  }

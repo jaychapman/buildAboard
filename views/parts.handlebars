@@ -1,0 +1,201 @@
+<!-- MAIN CONTAINER-->
+<div class="container">
+
+
+
+  <!--ENTER OLD CODE BELOW THIS LINE STARTING WITH BUILD FORM COMMENT-->
+  <!--+++++++++++++++++++++++++++-->
+
+
+  <!-- Build Form-->
+
+
+  <div id="build" class="container">
+    <div class="spacer4"></div>
+
+    <h3>It's easy! Select the parts you want and we'll build your new board</h3>
+
+    <br>
+
+    <!-- BEGIN ADD PARTS FORM -->
+    <form action="/api/parts/add" method="POST" id="partForm">
+      <div class="form-group">
+        <label for="deck">Choose a Deck </label>
+        <select class="form-control" name="deck" id="deck">
+          <option>Baker</option>
+          <option>Flip</option>
+          <option>Toy Machine</option>
+          <option>Primitive</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="truck">Choose a Truck </label>
+        <select class="form-control" name="truck" id="truck">
+          <option>Independent</option>
+          <option>Thunder</option>
+          <option>Krux</option>
+          <option> Gullwig</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="wheels">Choose Wheels </label>
+        <select class="form-control" name="wheels" id="wheels">
+          <option>Bones</option>
+          <option>Pig</option>
+          <option>Spitfire</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="bearings">Choose Bearings </label>
+        <select class="form-control" name="bearings" id="bearings">
+          <option>Spitfire</option>
+          <option>Independent</option>
+          <option>Bones</option>
+        </select>
+      </div>
+      <br>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button id="reviewBtn" class="btn btn-outline-dark">Click to view your new board</button>
+        </div>
+      </div>
+    </form>
+    <!--END PARTS ADD FORM-->
+
+    {{!-- <!--display new board-->
+    <br>
+    <br>
+
+
+    <div>
+      <!--email-->
+      <br>
+      <div class="invoiceButton">
+        <button id="invoiceBtn" type="submit" value="View Invoice" class="btn btn-dark">View Invoice</a></button>
+      </div>
+      <br>
+      <div>
+        <h5>If you're happy with your new board enter your name and email and we'll send your invoice. If you want to
+          try again <a id="startOver" href="#">click here</a> to start over</h5>
+      </div>
+      <br>
+      <form action="/api/customers/add" method="POST">
+        <div class="form-group">
+          <label for="name">First Name</label>
+          <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp"
+            placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+            placeholder="Enter email" required>
+          <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+
+
+
+    <br>
+    <br>
+  </div>
+
+</div>
+<!--END BUILD FORM-->
+ --}}
+
+
+
+<!-- ORDER BOARD -->
+
+<!-- MODAL START-->
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Check out your new board!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- show image -->
+        <div id="skatePic"></div>
+        <br>
+        <!-- begin form -->
+        <div class="modalForm">
+          <form action="/api/orders/add" method="POST" id="orderForm">
+            <div class="form-group">
+              <label for="orderDeck">Your Deck</label>
+              <select class="form-control" name="orderDeck" id="orderDeck">
+                <option id="deckSelection"></option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="orderTruck">Your Truck </label>
+              <select class="form-control" name="orderTruck" id="orderTruck">
+                <option id="truckSelection"></option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="orderWheels">Your Wheels </label>
+              <select class="form-control" name="orderWheels" id="orderWheels">
+                <option id="wheelSelection"></option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="orderBearings">Your Bearings </label>
+              <select class="form-control" name="orderBearings" id="orderBearings">
+                <option id="bearingSelection"></option>
+              </select>
+            </div>
+            <br>
+            <div><h5>Fill out your contact info and hit submit!</h5></div>
+            <br>
+            <!-- Name and Email -->
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" name="firstName" id="firstName" aria-describedby="emailHelp"
+                placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" name="lastName" id="lastName" aria-describedby="emailHelp"
+                placeholder="Enter your Last name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+                placeholder="Enter email" required>
+              <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <br>
+            <!-- Submit -->
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button id="partBtn" type="submit" value="Add Part" class="btn btn-dark">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end form -->
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Trash this board and start over</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MODAL END-->
+
+
+  <footer>
+    <div class="container">
+      <div class="spacer"></div>
+      <h6>This site created by Death Wobble</h6>
+    </div>
+
+
+  </footer>

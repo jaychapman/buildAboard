@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="spacer4"></div>
+
+  <div id="reviewImgContainer">
+    <img id="reviewImage" src="/img/reviews.jpg" alt="">
+  </div>
+
+  <div>
+    <h3>Reviews</h3>
+    <p><a href="#addReview">Write a Review</a></p>
+  </div>
+
+
+
+  <div>
+
+
+    <!--display reviews-->
+    {{#each reviews}}
+    <section id="reviews">
+      <div class="card"></div>
+      <div id="displayReviews" class="card">
+        <div class="card-body reviewBody">
+          <h5 id="first_nameDisplay" class="card-title">{{dataValues.first_name}}</h5>
+          <p class="card-text">{{dataValues.post}}</p>
+          {{!-- <p class="reviewName">{{dataValues.first_name}}</p> --}}
+        </div>
+      </div>
+
+      <br>
+      {{else}}
+      <p>No Reviews Available</p>
+      <br>
+      {{/each}}
+    </section>
+
+
+
+
+    <br>
+    <div>
+      <a href="#">Read More...</a>
+    </div>
+
+    {{!-- </div> --}}
+    <br>
+    <hr>
+    <br>
+
+
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 pt-3">
+      <h3>How are we doing?</h3>
+      <br>
+      <br>
+
+
+
+      <form id="addReview" action="/api/reviews/add" method="POST">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" class="form-control" id="first_name" placeholder="name">
+        </div>
+        <div class="form-group">
+          <label for="post">Leave a Review</label>
+          <textarea class="form-control" name="post" id="post" rows="3"></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Submit Review" class="btn btn-dark">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="spacer"></div>
+        <h6>This site created by Death Wobble</h6>
+
+      </div>
+
+
+    </footer>
